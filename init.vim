@@ -40,13 +40,22 @@ Plug 'fatih/vim-go'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Other
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'rakr/vim-one'
 
 call plug#end()
 
+"let g:LanguageClient_serverCommands = {
+"	\ 'rust': ['rust-analyzer'],
+" \ }
+
+
 "" set shortcut for open Nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+
 
 if has('nvim')
     set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
@@ -65,7 +74,10 @@ endif
 set background=dark
 " let base16colorspace=256
 " let g:base16_shell_path="~/dev/others/base16/templates/shell/scripts/"
-" colorscheme base16-gruvbox-dark-hard
+let g:airline_theme='one'
+colorscheme one
+set background=light
+let g:one_allow_italics = 1
 syntax on
 hi Normal ctermbg=NONE
 " Brighter comments
