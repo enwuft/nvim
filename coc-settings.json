@@ -1,4 +1,25 @@
 {
   "rust-analyzer.cargo-watch.enable": false,
-  "rust-analyzer.serverPath": "/home/enwuft/.cargo/bin/rust-analyzer"
+  "rust-analyzer.serverPath": "/home/enwuft/.local/bin/rust-analyzer",
+  "languageserver": {
+	  "ccls": {
+		  "command": "ccls",
+		  "filetypes": [
+			  "c",
+			  "cpp"
+		  ],
+		  "rootPatterns": [
+			  ".ccls",
+			  "complie_commands.json",
+			  ".vim/",
+			  ".git/",
+			  ".hg/"
+		  ],
+		  "initializationOptions": {
+			  "cache": {
+				  "directory": "/tmp/ccls"
+			  }
+		  }
+	  }
+  }	
 }
