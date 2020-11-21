@@ -47,14 +47,22 @@ Plug 'rakr/vim-one'
 
 call plug#end()
 
+
+
+
 "let g:LanguageClient_serverCommands = {
 "	\ 'rust': ['rust-analyzer'],
 " \ }
+" coc global extenstion settings
+let g:coc_global_extensions = ['coc-rome', 'coc-python']
+set t_ut=
+
+
+
 
 
 "" set shortcut for open Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-
 
 
 if has('nvim')
@@ -161,7 +169,7 @@ set updatetime=300
 let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
 let g:go_fmt_command = "goimports"
-let g:go_bin_path = expand("~/dev/go/bin")
+let g:go_bin_path = expand("~/go/bin")
 
 " =============================================================================
 " # Editor settings
@@ -203,9 +211,9 @@ set wildmode=list:longest
 set wildignore=.hg,.svn,*~,*.png,*.jpg,*.gif,*.settings,Thumbs.db,*.min.js,*.swp,publish/*,intermediate/*,*.o,*.hi,Zend,vendor
 
 " Use wide tabs
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set noexpandtab
 
 " Wrapping options
