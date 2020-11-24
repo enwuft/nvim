@@ -45,25 +45,47 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'rakr/vim-one'
 
+" Git extenstion
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
+" vim-fugitive config
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
 
-
+	" unicode symbols
+	let g:airline_left_sep = '»'
+	let g:airline_left_sep = '▶'
+	let g:airline_right_sep = '«'
+	let g:airline_right_sep = '◀'
+	let g:airline_symbols.linenr = '␊'
+	let g:airline_symbols.linenr = '␤'
+	let g:airline_symbols.linenr = '¶'
+	let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.paste = 'ρ'
+	let g:airline_symbols.paste = 'Þ'
+	let g:airline_symbols.paste = '∥'
+	let g:airline_symbols.whitespace = 'Ξ'
+	"
+	" airline symbols
+	let g:airline_left_sep = ''
+	let g:airline_left_alt_sep = ''
+	let g:airline_right_sep = ''
+	let g:airline_right_alt_sep = ''
+	let g:airline_symbols.branch = ''
+	let g:airline_symbols.readonly = ''
+	let g:airline_symbols.linenr = ''
 
 "let g:LanguageClient_serverCommands = {
 "	\ 'rust': ['rust-analyzer'],
 " \ }
 " coc global extenstion settings
 let g:coc_global_extensions = ['coc-rome', 'coc-python']
-set t_ut=
-
-
-
-
 
 "" set shortcut for open Nerdtree
 map <C-n> :NERDTreeToggle<CR>
-
 
 if has('nvim')
     set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
@@ -75,11 +97,18 @@ end
 if !has('gui_running')
   set t_Co=256
 endif
-if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
+"if (match($TERM, "-256color") != -1) && (match($TERM, "screen-256color") == -1)
   " screen does not (yet) support truecolor
-  set termguicolors
-endif
-set background=dark
+"  set termguicolors
+" endif
+
+if exists('+termguicolors')
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
+endi
+
+" set background=dark
 " let base16colorspace=256
 " let g:base16_shell_path="~/dev/others/base16/templates/shell/scripts/"
 let g:airline_theme='one'
@@ -168,8 +197,11 @@ set updatetime=300
 " Golang
 let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
+let g:go_auto_type_info = 1
 let g:go_fmt_command = "goimports"
 let g:go_bin_path = expand("~/go/bin")
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " =============================================================================
 " # Editor settings
