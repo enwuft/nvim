@@ -5,7 +5,7 @@ sudo apt update; sudo apt upgrade -y; reboot
 ```
 install programming language
 ```bash
-sudo apt install python3 python3-pip golang clang cmake git zsh curl wget nvim -y
+sudo apt install python3 python3-pip golang clang cmake git zsh curl wget neovim -y
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # install auto suggestion from source
 ```
