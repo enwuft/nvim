@@ -83,7 +83,7 @@ endif
 " \ }
 
 " coc global extenstion settings
-let g:coc_global_extensions = ['coc-rome', 'coc-python', 'coc-rust-analyzer']
+let g:coc_global_extensions = ['coc-rome', 'coc-rust-analyzer']
 
 "" set shortcut for open Nerdtree
 map <C-n> :NERDTreeToggle<CR>
