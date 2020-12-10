@@ -1,18 +1,4 @@
 {
-	"jedi.enable": true,
-	"jedi.startupMessage": true,
-	"jedi.markupKindPreferred": "plaintext",
-	"jedi.trace.server": true,
-	"jedi.jediSettings.autoImportModules": [],
-	"jedi.executable.command": "jedi-language-server",
-	"jedi.executable.args": [],
-	"jedi.completion.disableSnippets": false,
-	"jedi.diagnostics.enable": true,
-	"jedi.diagnostics.didOpen": true,
-	"jedi.diagnostics.didChange": true,
-	"jedi.diagnostics.didSave": true,
-	"jedi.workspace.extraPaths": [],
-	"rust-analyzer.cargo-watch.enable": false,
 	"rust-analyzer.serverPath": "/home/enwuft/.local/bin/rust-analyzer",
 	"languageserver": {
 		"golang": {
