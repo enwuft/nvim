@@ -39,6 +39,7 @@ Plug 'fatih/vim-go'
 " Plug 'dag/vim-fish'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'hyhugh/coc-erlang_ls', {'do': 'yarn install --frozen-lockfile'}
 
 " Other
 Plug 'scrooloose/nerdtree'

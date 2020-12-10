@@ -1,4 +1,6 @@
 {
+	"erlang_ls.erlang_ls_path": "/home/enwuft/.local/bin/erlang_ls",
+  "erlang_ls.trace.server": "verbose",
 	"rust-analyzer.serverPath": "/home/enwuft/.local/bin/rust-analyzer",
 	"languageserver": {
 		"golang": {
@@ -130,6 +132,10 @@
 					}
 				}
 			}
-		}
+		},
+		"erlang": {
+      "command": "erlang_ls",
+      "filetypes": ["erlang"]
+    }
 	}
 }
