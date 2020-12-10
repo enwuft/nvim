@@ -81,8 +81,9 @@ endif
 "let g:LanguageClient_serverCommands = {
 "	\ 'rust': ['rust-analyzer'],
 " \ }
+
 " coc global extenstion settings
-let g:coc_global_extensions = ['coc-rome', 'coc-python']
+let g:coc_global_extensions = ['coc-rome', 'coc-python', 'coc-rust-analyzer']
 
 "" set shortcut for open Nerdtree
 map <C-n> :NERDTreeToggle<CR>

@@ -1,5 +1,5 @@
 {
- 	"jedi.enable": true,
+	"jedi.enable": true,
 	"jedi.startupMessage": true,
 	"jedi.markupKindPreferred": "plaintext",
 	"jedi.trace.server": true,
@@ -17,9 +17,13 @@
 	"languageserver": {
 		"golang": {
 			"command": "gopls",
-			"rootPatterns": ["go.mod"],
+			"rootPatterns": [
+				"go.mod"
+			],
 			"disableWorkspaceFolders": true,
-			"filetypes": ["go"]
+			"filetypes": [
+				"go"
+			]
 		},
 		"ccls": {
 			"command": "ccls",
@@ -39,6 +43,107 @@
 					"directory": "/tmp/ccls"
 				}
 			}
+		},
+		"bash": {
+			"command": "bash-language-server",
+			"args": [
+				"start"
+			],
+			"filetypes": [
+				"sh"
+			],
+			"ignoredRootPaths": [
+				"~"
+			]
+		},
+		"dockerfile": {
+			"command": "docker-langserver",
+			"filetypes": [
+				"dockerfile"
+			],
+			"args": [
+				"--stdio"
+			]
+		},
+		"graphql": {
+			"command": "graphql-lsp",
+			"args": [
+				"server",
+				"-m",
+				"stream"
+			],
+			"filetypes": [
+				"typescript",
+				"typescriptreact",
+				"graphql"
+			]
+		},
+		"python": {
+			"command": "python",
+			"args": [
+				"-mpyls",
+				"-vv",
+				"--log-file",
+				"/tmp/lsp_python.log"
+			],
+			"trace.server": "verbose",
+			"filetypes": [
+				"python"
+			],
+			"settings": {
+				"pyls": {
+					"enable": true,
+					"trace": {
+						"server": "verbose"
+					},
+					"commandPath": "",
+					"configurationSources": [
+						"pycodestyle"
+					],
+					"plugins": {
+						"jedi_completion": {
+							"enabled": true
+						},
+						"jedi_hover": {
+							"enabled": true
+						},
+						"jedi_references": {
+							"enabled": true
+						},
+						"jedi_signature_help": {
+							"enabled": true
+						},
+						"jedi_symbols": {
+							"enabled": true,
+							"all_scopes": true
+						},
+						"mccabe": {
+							"enabled": true,
+							"threshold": 15
+						},
+						"preload": {
+							"enabled": true
+						},
+						"pycodestyle": {
+							"enabled": true
+						},
+						"pydocstyle": {
+							"enabled": false,
+							"match": "(?!test_).*\\.py",
+							"matchDir": "[^\\.].*"
+						},
+						"pyflakes": {
+							"enabled": true
+						},
+						"rope_completion": {
+							"enabled": true
+						},
+						"yapf": {
+							"enabled": true
+						}
+					}
+				}
+			}
 		}
-	}	
+	}
 }
