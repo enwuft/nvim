@@ -8,6 +8,8 @@ install programming language
 sudo apt install python3 python3-pip golang clang cmake git zsh curl wget neovim -y
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # install auto suggestion from source
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+plugins=(zsh-autosuggestions)
 ```
 
 ```bash
@@ -22,11 +24,11 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt update && sudo apt install yarn -y
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
-sudo apt update
-sudo apt install docker-ce -y
-sudo usermod -aG docker ${USER}
-su - ${USER}
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" \
+sudo apt update \
+sudo apt install docker-ce -y \
+sudo usermod -aG docker ${USER} \
+su - ${USER} \
 id -nG
 ```
 ```bash
