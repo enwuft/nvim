@@ -1,7 +1,7 @@
 {
-	"erlang_ls.erlang_ls_path": "/home/enwuft/.local/bin/erlang_ls",
+	"erlang_ls.erlang_ls_path": "/home/$USER/.local/bin/erlang_ls",
 	"erlang_ls.trace.server": "verbose",
-	"rust-analyzer.server.path": "/home/enwuft/.local/bin/rust-analyzer",
+	"rust-analyzer.server.path": "/home/$USER/.local/bin/rust-analyzer",
 	"languageserver": {
 		"golang": {
 			"command": "gopls",
