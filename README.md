@@ -1,4 +1,7 @@
-# nvim
+# zsh configueration
+Advanced Tab completion
+`autoload -U compinit
+compinit`
 
 ## cargo binabies
 ## outdated
