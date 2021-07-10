@@ -1,4 +1,7 @@
 ##### When we start install linux operation system (Ubuntu), every time I just install package, tool or programming language link Rust go etc.
+```sh
+https://github.com/gatsbyjs/gatsby/issues/11406#issuecomment-458769756
+```
 
 ```bash
 sudo apt update; sudo apt upgrade -y; reboot
